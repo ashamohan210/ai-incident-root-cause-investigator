@@ -1,0 +1,239 @@
+{
+  "version": "publication-summary-1",
+  "status": "UNEVALUATED PUBLICATION INVENTORY \u2014 not the frozen evaluation dataset",
+  "original_dataset_sha256": "dfaa4a661a03d482def3249bd3435f90d7d605a983c510ee57640d4782abce18",
+  "differences": [
+    "No verbatim reference quotes or answers.",
+    "No corpus hash, gold chunk labels or scoring evidence_units.",
+    "Historical question wording and category retained; summaries are explanatory, not exact-match scoring targets.",
+    "Existing scores apply only to the original local dataset, not this derivative."
+  ],
+  "questions": [
+    {
+      "id": "E01",
+      "category": "exact",
+      "question": "What documented root cause and resolution explain Payments API HTTP 503 responses with elevated DB connections?",
+      "historically_answerable": true,
+      "reference_summaries": [
+        {
+          "incident_id": "SYN-001",
+          "source_type": "synthetic",
+          "source_url": null,
+          "summary": "Describe SYN-001 and its documented fix; do not confirm the current incident cause."
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "category": "exact",
+      "question": "What caused Billing Service HTTP 500 errors immediately after release, and what was the recorded fix?",
+      "historically_answerable": true,
+      "reference_summaries": [
+        {
+          "incident_id": "SYN-013",
+          "source_type": "synthetic",
+          "source_url": null,
+          "summary": "Identify the missing configuration key and documented rollback/re-release."
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "category": "exact",
+      "question": "Why did Catalog Frontend static assets return 404 after deployment, and how was it resolved?",
+      "historically_answerable": true,
+      "reference_summaries": [
+        {
+          "incident_id": "SYN-014",
+          "source_type": "synthetic",
+          "source_url": null,
+          "summary": "Identify cache/manifest mismatch and documented matching bundle/CDN fix."
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "category": "exact",
+      "question": "In GitHub DNS Outage Post Mortem, how long was the initial service downtime and the additional downtime for some repositories?",
+      "historically_answerable": true,
+      "reference_summaries": [
+        {
+          "incident_id": "PUB-539796025e31",
+          "source_type": "public",
+          "source_url": "https://github.blog/news-insights/dns-outage-post-mortem",
+          "summary": "A DNS configuration rollout did not complete the required server restarts. The article records separate service and repository recovery intervals."
+        }
+      ]
+    },
+    {
+      "id": "S01",
+      "category": "semantic",
+      "question": "Customers cannot finish checkout because one write waits behind another transaction. Which historical incident and remedy fit?",
+      "historically_answerable": true,
+      "reference_summaries": [
+        {
+          "incident_id": "SYN-002",
+          "source_type": "synthetic",
+          "source_url": null,
+          "summary": "Explain blocking transaction and its documented termination/scope reduction."
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "category": "semantic",
+      "question": "Reads became much slower after a database schema update; the engine scans entire tables. What past explanation and fix are documented?",
+      "historically_answerable": true,
+      "reference_summaries": [
+        {
+          "incident_id": "SYN-003",
+          "source_type": "synthetic",
+          "source_url": null,
+          "summary": "Explain missing index and online migration/query-plan verification."
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "category": "semantic",
+      "question": "A message is delivered again and customers receive the same email twice. What previous defect and corrective action match?",
+      "historically_answerable": true,
+      "reference_summaries": [
+        {
+          "incident_id": "SYN-007",
+          "source_type": "synthetic",
+          "source_url": null,
+          "summary": "Explain non-idempotent retry handling and idempotency keys."
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "category": "semantic",
+      "question": "Scheduled reports stopped appearing after a settings change moved execution away from universal time. What historical cause and recovery match?",
+      "historically_answerable": true,
+      "reference_summaries": [
+        {
+          "incident_id": "SYN-015",
+          "source_type": "synthetic",
+          "source_url": null,
+          "summary": "Explain UTC/local-time default change, correction and backfill."
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "category": "semantic",
+      "question": "Which Cloudflare report explains how a shared central storage failure broke Workers KV cold reads and writes and cascaded to dependent services?",
+      "historically_answerable": true,
+      "reference_summaries": [
+        {
+          "incident_id": "PUB-132729161ab7",
+          "source_type": "public",
+          "source_url": "https://blog.cloudflare.com/cloudflare-service-outage-june-12-2025?src=content",
+          "summary": "A shared storage dependency disruption impaired Workers KV and affected services that depended on it."
+        }
+      ]
+    },
+    {
+      "id": "C01",
+      "category": "cross_document",
+      "question": "Compare the historical HTTP 503 causes in Payments API, Checkout Gateway, and User Profile API. What different checks and fixes do they suggest?",
+      "historically_answerable": true,
+      "reference_summaries": [
+        {
+          "incident_id": "SYN-001",
+          "source_type": "synthetic",
+          "source_url": null,
+          "summary": "Distinguish database pool capacity, readiness probes, and thread exhaustion; cite all three incidents."
+        },
+        {
+          "incident_id": "SYN-005",
+          "source_type": "synthetic",
+          "source_url": null,
+          "summary": "Distinguish database pool capacity, readiness probes, and thread exhaustion; cite all three incidents."
+        },
+        {
+          "incident_id": "SYN-006",
+          "source_type": "synthetic",
+          "source_url": null,
+          "summary": "Distinguish database pool capacity, readiness probes, and thread exhaustion; cite all three incidents."
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "category": "cross_document",
+      "question": "Compare the TLS failure in Partner API Integration, login failure in Employee SSO, and repeated 401 errors in Mobile Application. How do the causes differ?",
+      "historically_answerable": true,
+      "reference_summaries": [
+        {
+          "incident_id": "SYN-018",
+          "source_type": "synthetic",
+          "source_url": null,
+          "summary": "Distinguish certificate chain, issuer configuration, and clock skew; cite each separately."
+        },
+        {
+          "incident_id": "SYN-019",
+          "source_type": "synthetic",
+          "source_url": null,
+          "summary": "Distinguish certificate chain, issuer configuration, and clock skew; cite each separately."
+        },
+        {
+          "incident_id": "SYN-020",
+          "source_type": "synthetic",
+          "source_url": null,
+          "summary": "Distinguish certificate chain, issuer configuration, and clock skew; cite each separately."
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "category": "cross_document",
+      "question": "Compare the synthetic Public API Edge missing-DNS-record incident with GitHub DNS Outage Post Mortem. What configuration failures caused name-resolution trouble?",
+      "historically_answerable": true,
+      "reference_summaries": [
+        {
+          "incident_id": "SYN-016",
+          "source_type": "synthetic",
+          "source_url": null,
+          "summary": "Clearly label synthetic versus public; distinguish accidental record removal from public rollout/restart and DNS/provisioning dependency failures."
+        },
+        {
+          "incident_id": "PUB-539796025e31",
+          "source_type": "public",
+          "source_url": "https://github.blog/news-insights/dns-outage-post-mortem",
+          "summary": "A DNS configuration rollout did not complete the required server restarts. The article records separate service and repository recovery intervals."
+        }
+      ]
+    },
+    {
+      "id": "I01",
+      "category": "insufficient",
+      "question": "What is the documented root cause and repair procedure for quantum processor decoherence after a helium purge?",
+      "historically_answerable": false,
+      "reference_summaries": []
+    },
+    {
+      "id": "I02",
+      "category": "insufficient",
+      "question": "Which CVE and attacker IP caused our payment outage yesterday? No security logs or forensic evidence are available.",
+      "historically_answerable": false,
+      "reference_summaries": []
+    },
+    {
+      "id": "I03",
+      "category": "insufficient",
+      "question": "What exact database pool numeric value and production hostname must I change now to guarantee fixing our current HTTP 503 outage? No current configuration or logs are supplied.",
+      "historically_answerable": false,
+      "reference_summaries": []
+    },
+    {
+      "id": "I04",
+      "category": "insufficient",
+      "question": "Does the available corpus document a satellite radiation hardware fault, including vendor-specific component replacement steps?",
+      "historically_answerable": false,
+      "reference_summaries": []
+    }
+  ]
+}

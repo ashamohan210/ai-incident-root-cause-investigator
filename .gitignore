@@ -1,0 +1,74 @@
+# Credentials (keep the safe template)
+.env
+.env.*
+!.env.example
+secrets.toml
+**/secrets.toml
+*.pem
+*.key
+.aws/
+
+# Python environments, downloaded runtime, caches, and build output
+.venv/
+venv/
+env/
+.python/
+.uv-cache/
+.tokenizer-cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Local incident data, logs, and generated files
+data/*
+!data/.gitkeep
+logs/*
+!logs/.gitkeep
+*.log
+*.sqlite*
+*.db
+.DS_Store
+.idea/
+.vscode/
+
+# Publication: preserve original evaluated artifacts locally; publish labeled copies.
+evaluation/*
+!evaluation/publication_safe/
+
+# Local model runtimes, credentials and agent/workspace state
+.ollama/
+.huggingface/
+.cache/
+.codex/
+.agents/
+.claude/
+.cursor/
+.mcp.json
+.netrc
+.pypirc
+credentials.json
+service-account*.json
+*.safetensors
+*.gguf
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.tmp
+*.bak
+.coverage
+htmlcov/
+
+# Additional local tooling and credential stores
+.envrc
+.tox/
+.nox/
+.langgraph_api/
+.langsmith/
+*.p12
+*.pfx

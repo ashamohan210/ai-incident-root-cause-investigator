@@ -1,0 +1,169 @@
+{
+  "review_method": "Coding-assistant qualitative review against retrieved source excerpts. Not independent human adjudication; exact quotes are not automatic semantic support.",
+  "questions": {
+    "E01": {
+      "reviewed_historical_claims": 3,
+      "supported_historical_claims": 3,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Requested historical evidence and fixes are present with source-backed quotations.",
+      "unsupported_historical_indices": []
+    },
+    "E02": {
+      "reviewed_historical_claims": 6,
+      "supported_historical_claims": 6,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Requested historical evidence and fixes are present with source-backed quotations. Extra separately labeled public incidents are beyond the requested target and can distract.",
+      "unsupported_historical_indices": []
+    },
+    "E03": {
+      "reviewed_historical_claims": 3,
+      "supported_historical_claims": 3,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Requested historical evidence and fixes are present with source-backed quotations.",
+      "unsupported_historical_indices": []
+    },
+    "E04": {
+      "reviewed_historical_claims": 3,
+      "supported_historical_claims": 3,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Requested historical evidence and fixes are present with source-backed quotations. Extra separately labeled public incidents are beyond the requested target and can distract.",
+      "unsupported_historical_indices": []
+    },
+    "S01": {
+      "reviewed_historical_claims": 3,
+      "supported_historical_claims": 3,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Requested historical evidence and fixes are present with source-backed quotations.",
+      "unsupported_historical_indices": []
+    },
+    "S02": {
+      "reviewed_historical_claims": 3,
+      "supported_historical_claims": 3,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Requested historical evidence and fixes are present with source-backed quotations.",
+      "unsupported_historical_indices": []
+    },
+    "S03": {
+      "reviewed_historical_claims": 3,
+      "supported_historical_claims": 3,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Requested historical evidence and fixes are present with source-backed quotations.",
+      "unsupported_historical_indices": []
+    },
+    "S04": {
+      "reviewed_historical_claims": 2,
+      "supported_historical_claims": 2,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Requested historical evidence and fixes are present with source-backed quotations.",
+      "unsupported_historical_indices": []
+    },
+    "S05": {
+      "reviewed_historical_claims": 10,
+      "supported_historical_claims": 8,
+      "reviewed_hypotheses": 1,
+      "supported_hypotheses": 1,
+      "expected_behavior_pass": false,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Core Workers KV causal evidence is present, but two background/prevention passages are wrongly typed as incident root causes; not a fully supported answer.",
+      "unsupported_historical_indices": [
+        2,
+        3
+      ]
+    },
+    "C01": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": false,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "False refusal at evidence assessment; generic saved error does not distinguish malformed structure from transport failure.",
+      "unsupported_historical_indices": []
+    },
+    "C02": {
+      "reviewed_historical_claims": 9,
+      "supported_historical_claims": 9,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Requested historical evidence and fixes are present with source-backed quotations.",
+      "unsupported_historical_indices": []
+    },
+    "C03": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": false,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "False refusal: evidence selection returned insufficient despite both required incidents being retrieved.",
+      "unsupported_historical_indices": []
+    },
+    "I01": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": true,
+      "reason": "Correct insufficient-evidence fallback with no fabricated requested facts.",
+      "unsupported_historical_indices": []
+    },
+    "I02": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": true,
+      "reason": "Correct insufficient-evidence fallback with no fabricated requested facts.",
+      "unsupported_historical_indices": []
+    },
+    "I03": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": true,
+      "reason": "Correct insufficient-evidence fallback with no fabricated requested facts.",
+      "unsupported_historical_indices": []
+    },
+    "I04": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": true,
+      "reason": "Correct insufficient-evidence fallback with no fabricated requested facts.",
+      "unsupported_historical_indices": []
+    }
+  },
+  "publication_note": "Publication copy: explanatory wording may be paraphrased; numeric review results unchanged. Original local artifact preserved."
+}

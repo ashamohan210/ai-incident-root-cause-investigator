@@ -1,0 +1,10 @@
+provider = "mem0_platform"
+# Optional future integration. Disabled means no SDK initialization or HTTP calls.
+enabled = false
+max_memories = 100
+page_size = 50
+max_text_chars = 2000
+timeout_seconds = 20
+ledger_path = "data/memory/phase7_usage.json"
+max_write_operations = 8
+max_read_operations = 30

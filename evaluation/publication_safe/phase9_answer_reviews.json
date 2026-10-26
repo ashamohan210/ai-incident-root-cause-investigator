@@ -1,0 +1,547 @@
+{
+  "review_method": "Coding-assistant qualitative inspection against full retrieved passages, not independent human adjudication or a judge-model API. Unclear fragments are not counted as supported. Expected-behavior passes measure correct task evidence and abstention; they do not imply every auxiliary excerpt is clear. No current hypotheses were selected in this factual/comparison evaluation set.",
+  "questions": {
+    "E01": {
+      "reviewed_historical_claims": 2,
+      "supported_historical_claims": 2,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Correct Payments API pool-capacity cause and documented controlled rollout fix, copied from labeled fields.",
+      "unclear_historical_indices": [],
+      "contradicted_historical_indices": [],
+      "historical_claim_checks": [
+        {
+          "section": "historical_root_causes",
+          "index": 0,
+          "chunk_id": "SYN-001:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 1,
+          "chunk_id": "SYN-001:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        }
+      ],
+      "additional_incidents_beyond_required_references": []
+    },
+    "E02": {
+      "reviewed_historical_claims": 2,
+      "supported_historical_claims": 2,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Correct Billing configuration-key cause and rollback/re-release resolution; no unrelated public causes selected.",
+      "unclear_historical_indices": [],
+      "contradicted_historical_indices": [],
+      "historical_claim_checks": [
+        {
+          "section": "historical_root_causes",
+          "index": 0,
+          "chunk_id": "SYN-013:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 1,
+          "chunk_id": "SYN-013:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        }
+      ],
+      "additional_incidents_beyond_required_references": []
+    },
+    "E03": {
+      "reviewed_historical_claims": 3,
+      "supported_historical_claims": 3,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Correct manifest/CDN mismatch and matching-bundle/cache-invalidation fix.",
+      "unclear_historical_indices": [],
+      "contradicted_historical_indices": [],
+      "historical_claim_checks": [
+        {
+          "section": "historical_root_causes",
+          "index": 0,
+          "chunk_id": "SYN-014:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 1,
+          "chunk_id": "SYN-014:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "historical_observations",
+          "index": 2,
+          "chunk_id": "SYN-014:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        }
+      ],
+      "additional_incidents_beyond_required_references": []
+    },
+    "E04": {
+      "reviewed_historical_claims": 2,
+      "supported_historical_claims": 2,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Both requested downtime durations are correctly quoted from the public GitHub report; duplicate clipped introduction adds noise but the complete duration sentence is present.",
+      "unclear_historical_indices": [],
+      "contradicted_historical_indices": [],
+      "historical_claim_checks": [
+        {
+          "section": "historical_observations",
+          "index": 0,
+          "chunk_id": "PUB-539796025e31:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "historical_observations",
+          "index": 1,
+          "chunk_id": "PUB-539796025e31:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        }
+      ],
+      "additional_incidents_beyond_required_references": []
+    },
+    "S01": {
+      "reviewed_historical_claims": 2,
+      "supported_historical_claims": 2,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Correct blocking-transaction cause and reviewed termination/shorter-scope resolution.",
+      "unclear_historical_indices": [],
+      "contradicted_historical_indices": [],
+      "historical_claim_checks": [
+        {
+          "section": "historical_root_causes",
+          "index": 0,
+          "chunk_id": "SYN-002:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 1,
+          "chunk_id": "SYN-002:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        }
+      ],
+      "additional_incidents_beyond_required_references": []
+    },
+    "S02": {
+      "reviewed_historical_claims": 3,
+      "supported_historical_claims": 3,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Correct missing-index/table-scan cause and online-index/query-plan verification resolution.",
+      "unclear_historical_indices": [],
+      "contradicted_historical_indices": [],
+      "historical_claim_checks": [
+        {
+          "section": "historical_root_causes",
+          "index": 0,
+          "chunk_id": "SYN-003:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 1,
+          "chunk_id": "SYN-003:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "historical_observations",
+          "index": 2,
+          "chunk_id": "SYN-003:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        }
+      ],
+      "additional_incidents_beyond_required_references": []
+    },
+    "S03": {
+      "reviewed_historical_claims": 3,
+      "supported_historical_claims": 3,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Correct non-idempotent retry/redelivery cause and idempotency-key resolution; no definite current-cause paraphrase.",
+      "unclear_historical_indices": [],
+      "contradicted_historical_indices": [],
+      "historical_claim_checks": [
+        {
+          "section": "historical_root_causes",
+          "index": 0,
+          "chunk_id": "SYN-007:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 1,
+          "chunk_id": "SYN-007:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "historical_observations",
+          "index": 2,
+          "chunk_id": "SYN-007:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        }
+      ],
+      "additional_incidents_beyond_required_references": []
+    },
+    "S04": {
+      "reviewed_historical_claims": 2,
+      "supported_historical_claims": 2,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Correct UTC/local-time change and correction/backfill resolution.",
+      "unclear_historical_indices": [],
+      "contradicted_historical_indices": [],
+      "historical_claim_checks": [
+        {
+          "section": "historical_root_causes",
+          "index": 0,
+          "chunk_id": "SYN-015:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 1,
+          "chunk_id": "SYN-015:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        }
+      ],
+      "additional_incidents_beyond_required_references": []
+    },
+    "S05": {
+      "reviewed_historical_claims": 7,
+      "supported_historical_claims": 6,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Core central-storage/Workers KV cascade evidence is correctly quoted as public observations, not inferred role labels. One extra fragment (an impact fragment without an identified subject) has no subject and is counted unclear, not supported.",
+      "unclear_historical_indices": [
+        0
+      ],
+      "contradicted_historical_indices": [],
+      "historical_claim_checks": [
+        {
+          "section": "historical_observations",
+          "index": 0,
+          "chunk_id": "PUB-132729161ab7:chunk:007",
+          "judgment": "unclear_fragment",
+          "basis": "Incomplete/ambiguous excerpt context; not counted as supported."
+        },
+        {
+          "section": "historical_observations",
+          "index": 1,
+          "chunk_id": "PUB-132729161ab7:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "historical_observations",
+          "index": 2,
+          "chunk_id": "PUB-132729161ab7:chunk:008",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "historical_observations",
+          "index": 3,
+          "chunk_id": "PUB-132729161ab7:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "historical_observations",
+          "index": 4,
+          "chunk_id": "PUB-132729161ab7:chunk:007",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "historical_observations",
+          "index": 5,
+          "chunk_id": "PUB-132729161ab7:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "historical_observations",
+          "index": 6,
+          "chunk_id": "PUB-132729161ab7:chunk:007",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        }
+      ],
+      "additional_incidents_beyond_required_references": []
+    },
+    "C01": {
+      "reviewed_historical_claims": 6,
+      "supported_historical_claims": 6,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "All three requested HTTP 503 mechanisms and documented fixes are present with distinct incident references.",
+      "unclear_historical_indices": [],
+      "contradicted_historical_indices": [],
+      "historical_claim_checks": [
+        {
+          "section": "historical_root_causes",
+          "index": 0,
+          "chunk_id": "SYN-005:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "historical_root_causes",
+          "index": 1,
+          "chunk_id": "SYN-006:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "historical_root_causes",
+          "index": 2,
+          "chunk_id": "SYN-001:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 3,
+          "chunk_id": "SYN-005:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 4,
+          "chunk_id": "SYN-006:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 5,
+          "chunk_id": "SYN-001:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        }
+      ],
+      "additional_incidents_beyond_required_references": []
+    },
+    "C02": {
+      "reviewed_historical_claims": 13,
+      "supported_historical_claims": 11,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "All three requested synthetic causes and fixes are correctly distinguished. Extra Cloudflare material is unrequested; two clipped continuation fragments are counted unclear rather than supported.",
+      "unclear_historical_indices": [
+        6,
+        8
+      ],
+      "contradicted_historical_indices": [],
+      "historical_claim_checks": [
+        {
+          "section": "historical_root_causes",
+          "index": 0,
+          "chunk_id": "SYN-018:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "historical_root_causes",
+          "index": 1,
+          "chunk_id": "SYN-019:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "historical_root_causes",
+          "index": 2,
+          "chunk_id": "SYN-020:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 3,
+          "chunk_id": "SYN-018:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 4,
+          "chunk_id": "SYN-019:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 5,
+          "chunk_id": "SYN-020:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "historical_observations",
+          "index": 6,
+          "chunk_id": "PUB-132729161ab7:chunk:003",
+          "judgment": "unclear_fragment",
+          "basis": "Incomplete/ambiguous excerpt context; not counted as supported."
+        },
+        {
+          "section": "historical_observations",
+          "index": 7,
+          "chunk_id": "PUB-132729161ab7:chunk:004",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "historical_observations",
+          "index": 8,
+          "chunk_id": "PUB-132729161ab7:chunk:003",
+          "judgment": "unclear_fragment",
+          "basis": "Incomplete/ambiguous excerpt context; not counted as supported."
+        },
+        {
+          "section": "historical_observations",
+          "index": 9,
+          "chunk_id": "SYN-018:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "historical_observations",
+          "index": 10,
+          "chunk_id": "SYN-019:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "historical_observations",
+          "index": 11,
+          "chunk_id": "PUB-132729161ab7:chunk:003",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        },
+        {
+          "section": "historical_observations",
+          "index": 12,
+          "chunk_id": "SYN-020:chunk:001",
+          "judgment": "supported",
+          "basis": "Exact source excerpt supports this typed synthetic field or neutral public observation; requested reference evidence reviewed separately."
+        }
+      ],
+      "additional_incidents_beyond_required_references": [
+        "PUB-132729161ab7"
+      ]
+    },
+    "C03": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": false,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "False refusal: raw response contains 40 finding IDs against the maximum 20. Structured validation rejected it; no silent truncation, retries, or changed limits.",
+      "unclear_historical_indices": [],
+      "contradicted_historical_indices": [],
+      "historical_claim_checks": [],
+      "additional_incidents_beyond_required_references": []
+    },
+    "I01": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": true,
+      "reason": "Correct insufficient-evidence fallback; no fabricated domain facts, attacker/CVE attribution, numeric settings, hostnames, or guaranteed repairs.",
+      "unclear_historical_indices": [],
+      "contradicted_historical_indices": [],
+      "historical_claim_checks": [],
+      "additional_incidents_beyond_required_references": []
+    },
+    "I02": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": true,
+      "reason": "Correct insufficient-evidence fallback; no fabricated domain facts, attacker/CVE attribution, numeric settings, hostnames, or guaranteed repairs.",
+      "unclear_historical_indices": [],
+      "contradicted_historical_indices": [],
+      "historical_claim_checks": [],
+      "additional_incidents_beyond_required_references": []
+    },
+    "I03": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": true,
+      "reason": "Correct insufficient-evidence fallback; no fabricated domain facts, attacker/CVE attribution, numeric settings, hostnames, or guaranteed repairs.",
+      "unclear_historical_indices": [],
+      "contradicted_historical_indices": [],
+      "historical_claim_checks": [],
+      "additional_incidents_beyond_required_references": []
+    },
+    "I04": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": true,
+      "reason": "Correct insufficient-evidence fallback; no fabricated domain facts, attacker/CVE attribution, numeric settings, hostnames, or guaranteed repairs.",
+      "unclear_historical_indices": [],
+      "contradicted_historical_indices": [],
+      "historical_claim_checks": [],
+      "additional_incidents_beyond_required_references": []
+    }
+  },
+  "publication_note": "Publication copy: explanatory wording may be paraphrased; numeric review results unchanged. Original local artifact preserved."
+}

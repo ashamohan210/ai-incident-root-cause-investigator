@@ -1,0 +1,7 @@
+candidate_limit = 10
+result_limit = 5
+rrf_k = 60
+# Optional: failures retain RRF order and report reranking_active=false.
+reranking_enabled = true
+reranker_model = "cross-encoder/ms-marco-MiniLM-L6-v2"
+reranker_path = "data/models/reranker"

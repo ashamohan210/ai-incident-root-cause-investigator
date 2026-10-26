@@ -1,0 +1,376 @@
+{
+  "review_method": "Coding-assistant qualitative inspection of saved answers and retrieved passages; not independent human adjudication or a separate judge-model API call. Only exposed claims are scored; refused answers reduce coverage.",
+  "questions": {
+    "E01": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": false,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "False refusal: required evidence was retrieved, but the draft was withheld because hypothesis citations were not validated in historical findings.",
+      "historical_claim_checks": [],
+      "hypothesis_checks": []
+    },
+    "E02": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": false,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "False refusal: required evidence was retrieved, but the draft was withheld because hypothesis citations were not validated in historical findings.",
+      "historical_claim_checks": [],
+      "hypothesis_checks": []
+    },
+    "E03": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": false,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "False refusal: required evidence was retrieved, but the draft was withheld because hypothesis citations were not validated in historical findings.",
+      "historical_claim_checks": [],
+      "hypothesis_checks": []
+    },
+    "E04": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": false,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "False refusal: required evidence was retrieved, but the draft was withheld because hypothesis citations were not validated in historical findings.",
+      "historical_claim_checks": [],
+      "hypothesis_checks": []
+    },
+    "S01": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": false,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "False refusal: required evidence was retrieved, but the draft was withheld because hypothesis citations were not validated in historical findings.",
+      "historical_claim_checks": [],
+      "hypothesis_checks": []
+    },
+    "S02": {
+      "reviewed_historical_claims": 2,
+      "supported_historical_claims": 2,
+      "reviewed_hypotheses": 1,
+      "supported_hypotheses": 1,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Correct source root cause and documented resolution; plausible source-backed hypothesis is explicitly labeled unconfirmed.",
+      "historical_claim_checks": [
+        {
+          "section": "historical_root_causes",
+          "index": 0,
+          "chunk_id": "SYN-003:chunk:001",
+          "supported": true,
+          "basis": "Exact quoted source content supports the historical claim type; incident identity and source metadata agree."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 0,
+          "chunk_id": "SYN-003:chunk:001",
+          "supported": true,
+          "basis": "Exact quoted source content supports the historical claim type; incident identity and source metadata agree."
+        }
+      ],
+      "hypothesis_checks": [
+        {
+          "index": 0,
+          "chunk_ids": [
+            "SYN-003:chunk:001"
+          ],
+          "supported": true,
+          "basis": "Plausible unconfirmed possibility grounded in the cited technical mechanism; not evidence that the current incident has this cause."
+        }
+      ]
+    },
+    "S03": {
+      "reviewed_historical_claims": 2,
+      "supported_historical_claims": 2,
+      "reviewed_hypotheses": 1,
+      "supported_hypotheses": 1,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Correct source root cause and documented resolution; plausible source-backed hypothesis is explicitly labeled unconfirmed. Wording inside the S03 hypothesis says root cause involves, which is stronger than the surrounding uncertainty labels and merits future tightening.",
+      "historical_claim_checks": [
+        {
+          "section": "historical_root_causes",
+          "index": 0,
+          "chunk_id": "SYN-007:chunk:001",
+          "supported": true,
+          "basis": "Exact quoted source content supports the historical claim type; incident identity and source metadata agree."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 0,
+          "chunk_id": "SYN-007:chunk:001",
+          "supported": true,
+          "basis": "Exact quoted source content supports the historical claim type; incident identity and source metadata agree."
+        }
+      ],
+      "hypothesis_checks": [
+        {
+          "index": 0,
+          "chunk_ids": [
+            "SYN-007:chunk:001"
+          ],
+          "supported": true,
+          "basis": "Plausible unconfirmed possibility grounded in the cited technical mechanism; not evidence that the current incident has this cause."
+        }
+      ]
+    },
+    "S04": {
+      "reviewed_historical_claims": 2,
+      "supported_historical_claims": 2,
+      "reviewed_hypotheses": 1,
+      "supported_hypotheses": 1,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Correct UTC-to-local-time historical cause and timezone correction/backfill resolution; hypothesis explicitly unconfirmed with uncertainty about current applicability.",
+      "historical_claim_checks": [
+        {
+          "section": "historical_root_causes",
+          "index": 0,
+          "chunk_id": "SYN-015:chunk:001",
+          "supported": true,
+          "basis": "Exact quoted source content supports the historical claim type; incident identity and source metadata agree."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 0,
+          "chunk_id": "SYN-015:chunk:001",
+          "supported": true,
+          "basis": "Exact quoted source content supports the historical claim type; incident identity and source metadata agree."
+        }
+      ],
+      "hypothesis_checks": [
+        {
+          "index": 0,
+          "chunk_ids": [
+            "SYN-015:chunk:001"
+          ],
+          "supported": true,
+          "basis": "Plausible unconfirmed possibility grounded in the cited technical mechanism; not evidence that the current incident has this cause."
+        }
+      ]
+    },
+    "S05": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": false,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "False refusal despite required public evidence: generated quotations did not occur in the cited Workers KV timeline passage; the validator withheld all findings.",
+      "historical_claim_checks": [],
+      "hypothesis_checks": []
+    },
+    "C01": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": false,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "False refusal of an answerable three-incident comparison: all three required chunks were retrieved, but a hypothesis referenced a passage not validated in historical findings.",
+      "historical_claim_checks": [],
+      "hypothesis_checks": []
+    },
+    "C02": {
+      "reviewed_historical_claims": 6,
+      "supported_historical_claims": 6,
+      "reviewed_hypotheses": 3,
+      "supported_hypotheses": 3,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Correctly distinguishes missing intermediate certificate, stale issuer configuration, and client clock skew, with all three documented resolutions. Hypotheses are source-backed and labeled unconfirmed, although their inner wording involves is stronger than ideal.",
+      "historical_claim_checks": [
+        {
+          "section": "historical_root_causes",
+          "index": 0,
+          "chunk_id": "SYN-018:chunk:001",
+          "supported": true,
+          "basis": "Exact quoted source content supports the historical claim type; incident identity and source metadata agree."
+        },
+        {
+          "section": "historical_root_causes",
+          "index": 1,
+          "chunk_id": "SYN-019:chunk:001",
+          "supported": true,
+          "basis": "Exact quoted source content supports the historical claim type; incident identity and source metadata agree."
+        },
+        {
+          "section": "historical_root_causes",
+          "index": 2,
+          "chunk_id": "SYN-020:chunk:001",
+          "supported": true,
+          "basis": "Exact quoted source content supports the historical claim type; incident identity and source metadata agree."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 0,
+          "chunk_id": "SYN-018:chunk:001",
+          "supported": true,
+          "basis": "Exact quoted source content supports the historical claim type; incident identity and source metadata agree."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 1,
+          "chunk_id": "SYN-019:chunk:001",
+          "supported": true,
+          "basis": "Exact quoted source content supports the historical claim type; incident identity and source metadata agree."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 2,
+          "chunk_id": "SYN-020:chunk:001",
+          "supported": true,
+          "basis": "Exact quoted source content supports the historical claim type; incident identity and source metadata agree."
+        }
+      ],
+      "hypothesis_checks": [
+        {
+          "index": 0,
+          "chunk_ids": [
+            "SYN-019:chunk:001"
+          ],
+          "supported": true,
+          "basis": "Plausible unconfirmed possibility grounded in the cited technical mechanism; not evidence that the current incident has this cause."
+        },
+        {
+          "index": 1,
+          "chunk_ids": [
+            "SYN-020:chunk:001"
+          ],
+          "supported": true,
+          "basis": "Plausible unconfirmed possibility grounded in the cited technical mechanism; not evidence that the current incident has this cause."
+        },
+        {
+          "index": 2,
+          "chunk_ids": [
+            "SYN-018:chunk:001"
+          ],
+          "supported": true,
+          "basis": "Plausible unconfirmed possibility grounded in the cited technical mechanism; not evidence that the current incident has this cause."
+        }
+      ]
+    },
+    "C03": {
+      "reviewed_historical_claims": 4,
+      "supported_historical_claims": 4,
+      "reviewed_hypotheses": 3,
+      "supported_hypotheses": 2,
+      "expected_behavior_pass": false,
+      "unsupported_requested_facts_withheld": null,
+      "reason": "Partial comparison: source labels and four quoted historical claims are correct, but hypothesis 2 reverses the restart failure. The public source says the authoritative server restarted while the caching server did not; the answer hypothesizes that the authoritative server did not restart. The public documented root cause is not correctly stated as a historical finding. Hypotheses 1 and 3 are plausible source-anchored possibilities; hypothesis 1 is an inference, not a documented causal conclusion.",
+      "historical_claim_checks": [
+        {
+          "section": "historical_root_causes",
+          "index": 0,
+          "chunk_id": "SYN-016:chunk:001",
+          "supported": true,
+          "basis": "Exact quoted source content supports the historical claim type; incident identity and source metadata agree."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 0,
+          "chunk_id": "PUB-539796025e31:chunk:002",
+          "supported": true,
+          "basis": "Exact quoted source content supports the historical claim type; incident identity and source metadata agree."
+        },
+        {
+          "section": "previous_resolutions",
+          "index": 1,
+          "chunk_id": "SYN-016:chunk:001",
+          "supported": true,
+          "basis": "Exact quoted source content supports the historical claim type; incident identity and source metadata agree."
+        },
+        {
+          "section": "historical_observations",
+          "index": 0,
+          "chunk_id": "PUB-539796025e31:chunk:001",
+          "supported": true,
+          "basis": "Exact quoted source content supports the historical claim type; incident identity and source metadata agree."
+        }
+      ],
+      "hypothesis_checks": [
+        {
+          "index": 0,
+          "chunk_ids": [
+            "PUB-539796025e31:chunk:001"
+          ],
+          "supported": true,
+          "basis": "Plausible unconfirmed possibility grounded in the cited technical mechanism; not evidence that the current incident has this cause."
+        },
+        {
+          "index": 1,
+          "chunk_ids": [
+            "PUB-539796025e31:chunk:002"
+          ],
+          "supported": false,
+          "basis": "Contradicts the cited source about which DNS server failed to restart."
+        },
+        {
+          "index": 2,
+          "chunk_ids": [
+            "PUB-539796025e31:chunk:002"
+          ],
+          "supported": true,
+          "basis": "Plausible unconfirmed possibility grounded in the cited technical mechanism; not evidence that the current incident has this cause."
+        }
+      ]
+    },
+    "I01": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": true,
+      "reason": "Correct abstention: no supported matching incident or requested current-specific facts established; no invented causes, CVEs, IPs, numeric settings, hostnames, guarantees, or hardware repair steps. Generic diagnostic advice is labeled as not retrieved evidence.",
+      "historical_claim_checks": [],
+      "hypothesis_checks": []
+    },
+    "I02": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": true,
+      "reason": "Correct abstention: no supported matching incident or requested current-specific facts established; no invented causes, CVEs, IPs, numeric settings, hostnames, guarantees, or hardware repair steps. Generic diagnostic advice is labeled as not retrieved evidence.",
+      "historical_claim_checks": [],
+      "hypothesis_checks": []
+    },
+    "I03": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": true,
+      "reason": "Correct abstention: no supported matching incident or requested current-specific facts established; no invented causes, CVEs, IPs, numeric settings, hostnames, guarantees, or hardware repair steps. Generic diagnostic advice is labeled as not retrieved evidence.",
+      "historical_claim_checks": [],
+      "hypothesis_checks": []
+    },
+    "I04": {
+      "reviewed_historical_claims": 0,
+      "supported_historical_claims": 0,
+      "reviewed_hypotheses": 0,
+      "supported_hypotheses": 0,
+      "expected_behavior_pass": true,
+      "unsupported_requested_facts_withheld": true,
+      "reason": "Correct abstention: no supported matching incident or requested current-specific facts established; no invented causes, CVEs, IPs, numeric settings, hostnames, guarantees, or hardware repair steps. Generic diagnostic advice is labeled as not retrieved evidence.",
+      "historical_claim_checks": [],
+      "hypothesis_checks": []
+    }
+  },
+  "publication_note": "Publication copy: explanatory wording may be paraphrased; numeric review results unchanged. Original local artifact preserved."
+}

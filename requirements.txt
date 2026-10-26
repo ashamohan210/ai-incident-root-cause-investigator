@@ -1,0 +1,10 @@
+# Web interface and local Phase 3 document processing.
+streamlit==1.66.0
+langchain-core==1.6.12
+langchain-text-splitters==1.1.3
+tiktoken==0.14.0
+tavily-python==0.8.5
+python-dotenv==1.2.4
+pinecone==10.0.0
+langgraph==1.2.16
+mem0ai==2.2.1
