@@ -1,5 +1,13 @@
 # AI Incident Root Cause Investigator
 
+## Historical incident evidence viewer
+
+Accepted investigations display one card per cited incident, grouping historical causes, documented resolutions and observations while retaining each supporting passage ID. Click **View full incident report** on a card to read the stored source record; click **Close full incident report** to hide it. Multiple cards can remain open.
+
+Synthetic reports are explicitly fictional and show available source fields, timeline and original narrative. Public records identify their publisher/date when stored, distinguish structured extraction from stored source material, and offer **View original postmortem** using a validated URL. Missing records or fields are explained rather than generated. The app does not fetch an article just because you open its card.
+
+Opening or closing details reads only local JSON and session state. It does not rerun LangGraph, retrieval, reranking, generation, or hosted memory. The existing report and citation validation are unchanged. A full report may be unavailable in a synthetic-only checkout even when a citation is displayed; its validated passage remains visible. Source lookup is restricted to approved dataset directories and rejects symlink or identity mismatches. Retrieved content is rendered as plain text.
+
 ## Start here: published synthetic sample
 
 For a new clone with no credentials or local data, follow [the synthetic-only quickstart](docs/reproducing_sample.md). It generates fictional reports, ingests them locally, runs offline tests, and opens the homepage. It does not create embeddings, collect public articles, upload records, or enable hosted memory.

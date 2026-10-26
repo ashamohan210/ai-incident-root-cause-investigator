@@ -1,5 +1,6 @@
 """Streamlit presentation and session orchestration; backend logic stays in Phase 6/7."""
 import hashlib
+import json
 import os
 import re
 import time
@@ -9,6 +10,7 @@ from urllib.parse import urlparse
 import streamlit as st
 
 from .investigation import investigate
+from .incident_viewer import load_incident, group_incidents, IncidentUnavailable
 
 DEMO_USER = "genacademy-demo-engineer"
 
@@ -25,6 +27,8 @@ def display_text(value):
 def public_url(value):
     """Only credential-free HTTP(S) source links, never file/javascript URLs."""
     try:
+        if not isinstance(value, str) or any(c.isspace() or ord(c) < 32 or ord(c) == 127 for c in value):
+            return None
         if display_text(value) != str(value or ""):
             return None
         parsed = urlparse(str(value or ""))
@@ -137,7 +141,88 @@ def source(row):
         st.caption(display_text("Passage: " + row["chunk_id"]))
 
 
-def render_report(result):
+
+def render_original_incident(row):
+    """Show stored facts/narrative only; never call retrieval or generation."""
+    try:
+        record = load_incident(row.get("incident_id"), row.get("source_type"))
+    except IncidentUnavailable as error:
+        st.info(str(error))
+        if row.get("source_type") == "public":
+            url = public_url(row.get("source_url") or row.get("source_reference"))
+            if url:
+                st.link_button("View original postmortem", url)
+        return
+    kind = record["source_type"]
+    st.subheader("Full historical incident report")
+    st.text(display_text(record["title"]))
+    if kind == "synthetic":
+        st.info("Fictional synthetic example — not a real production incident.")
+    else:
+        st.info("Local public source record. Structured fields are extracted data, not newly generated conclusions. A complete article may not be stored locally.")
+        url = public_url(record.get("source_url"))
+        if url:
+            st.link_button("View original postmortem", url)
+        cited_url = row.get("source_url")
+        if cited_url and cited_url != record.get("source_url"):
+            st.warning("The local record's source URL differs from the citation. The original validated citation has not been changed.")
+    fields = [("Incident ID", record.get("incident_id")), ("Publisher", record.get("publisher")),
+              ("Incident date", record.get("incident_date") or record.get("date")),
+              ("Affected service", record.get("affected_service")), ("Severity", record.get("severity")),
+              ("Category", record.get("category")), ("Symptoms", record.get("symptoms")),
+              ("Error codes", record.get("error_codes")), ("Timeline", record.get("timeline")),
+              ("Historical root cause", record.get("root_cause")), ("Historical resolution", record.get("resolution")),
+              ("Preventive actions", record.get("preventive_actions"))]
+    for label, value in fields:
+        st.caption(label)
+        if value is None or value == "" or value == [] or value == {}:
+            st.text("Not recorded in this source record.")
+        else:
+            # st.text avoids executing document HTML/Markdown, including in lists.
+            if isinstance(value, (dict, list)):
+                value = json.dumps(value, ensure_ascii=False, indent=2)
+            st.text(display_text(value))
+    narrative = record.get("full_report")
+    if kind == "synthetic":
+        st.subheader("Original stored report narrative")
+    else:
+        st.subheader("Stored public source material")
+        st.caption("Extraction format: " + display_text(record.get("evidence_format") or "Not recorded; verbatim completeness is not assumed."))
+    if isinstance(narrative, str) and narrative.strip():
+        st.text(display_text(narrative.replace("\\n", "\n") if kind == "synthetic" else narrative))
+    else:
+        st.info("No full narrative is stored locally. Use the original source link when available.")
+
+
+def toggle_incident_details(state_key):
+    st.session_state[state_key] = not st.session_state.get(state_key, False)
+
+
+def render_incident_card(card, viewer_scope):
+    row = card["source"]
+    token = hashlib.sha256((viewer_scope + "\0" + str(row.get("incident_id"))).encode()).hexdigest()[:24]
+    state_key = "evidence_open_" + token
+    with st.container(border=True):
+        st.subheader("Incident evidence")
+        source(row)
+        for heading, finding in card["findings"]:
+            st.caption(heading)
+            st.text(display_text(finding["supporting_passage"]))
+            st.caption(display_text("Passage: " + str(finding.get("chunk_id", "Not recorded"))))
+            # Keep any distinct validated public source link attached to its finding.
+            if finding.get("source_type") == "public":
+                url = public_url(finding.get("source_url"))
+                if url and url != row.get("source_url"):
+                    st.link_button("Open original public report", url)
+        opened = st.session_state.get(state_key, False)
+        st.button("Close full incident report" if opened else "View full incident report",
+                  key=state_key + "_button", on_click=toggle_incident_details, args=(state_key,))
+        if opened:
+            with st.container(border=True):
+                render_original_incident(row)
+
+
+def render_report(result, viewer_scope="report"):
     report = result["report"]
     status = report.get("status")
     st.subheader("Investigation summary")
@@ -150,21 +235,11 @@ def render_report(result):
     if warnings:
         st.warning("Historical retrieval was unavailable or partially degraded. Check Pinecone and local Ollama. This report may be incomplete.")
     st.subheader("Similar historical incidents")
-    seen = set()
-    for row in report.get("similar_historical_incidents", []):
-        if row["incident_id"] not in seen:
-            source(row)
-            seen.add(row["incident_id"])
-    if not seen:
+    cards = group_incidents(report)
+    if not cards:
         st.caption("No validated historical matches are presented.")
-    for heading, key in (("Historical root causes", "historical_root_causes"), ("Documented historical resolutions", "previous_resolutions"), ("Historical observations", "historical_observations")):
-        st.subheader(heading)
-        if not report.get(key):
-            st.caption("None established in this response.")
-        for finding in report.get(key, []):
-            with st.container(border=True):
-                source(finding)
-                st.text(display_text(finding["supporting_passage"]))
+    for card in cards:
+        render_incident_card(card, viewer_scope)
     st.subheader("Current hypotheses — unconfirmed")
     evidence = {r["id"]: {**r, "chunk_id": r["id"]} for r in result.get("retrieved_evidence", [])}
     checks = []
@@ -238,7 +313,7 @@ def render_app():
             st.text(display_text(latest["question"]))
         with st.chat_message("assistant"):
             st.caption(f"Duration: {latest['duration_seconds']:.1f} seconds")
-            render_report(latest["result"])
+            render_report(latest["result"], viewer_scope=f"{investigation_id}:{len(workspace['turns'])}")
     with st.form("followup_form_" + investigation_id, clear_on_submit=True):
         followup = st.text_input("Follow-up question", key="followup_" + investigation_id, max_chars=3500,
                                  placeholder="What checks have we already performed?")
